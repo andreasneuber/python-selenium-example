@@ -1,5 +1,5 @@
 # Python Selenium Example
-Very simple example for Starters
+Simple example for Starters
 
 ## Application under Test
 The tests were written for https://github.com/andreasneuber/automatic-test-sample-site.  

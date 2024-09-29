@@ -1,4 +1,5 @@
 import time
+import unittest
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,15 +21,15 @@ wait = WebDriverWait(driver, 10)
 element = wait.until(ec.element_to_be_clickable((By.NAME, 'Convert')))
 
 # Validate the main header
-expected_heading = "Bug Report Form"
+# expected_heading = "Sample Heading"
+expected_heading = "Form 6 - Convert Celsius to Fahrenheit"
 actual_heading = driver.find_element(By.TAG_NAME, "h2").text
 
-if expected_heading == actual_heading:
-    print("Header validation successful!")
-else:
-    print("Header validation failed. Expected:", expected_heading, "Actual:", actual_heading)
+# The actual assertion
+tc = unittest.TestCase()
+tc.assertEqual(expected_heading, actual_heading, "Expected heading '" + expected_heading + "' but got '" + actual_heading + "'")
 
+
+# Close the browser, after 2.5 seconds. If assertion above fails browser closes immediately.
 time.sleep(2.5)
-
-# Close the browser
 driver.quit()
