@@ -1,5 +1,4 @@
 # Python Selenium Example
-Simple example for Starters
 
 ## Application under Test
 The tests were written for https://github.com/andreasneuber/automatic-test-sample-site.  
@@ -15,4 +14,4 @@ README in that repo has further details how to set it up.
 - `pip install -r requirements.txt`
 
 ## Execute the tests
-`py main.py`
+`py tests.py`
